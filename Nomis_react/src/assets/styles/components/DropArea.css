@@ -1,0 +1,8 @@
+.drop_area {
+    border: 1px solid black;
+    margin: 10% 10% 10%;
+    padding: 2% 2% 2%;
+    border-radius: 25px;
+    background-color: white;
+    text-align: center;
+}

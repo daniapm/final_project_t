@@ -1,0 +1,7 @@
+# libraries and modules to install
+pip3 install pandas
+pip3 install openpyxl
+pip3 install google-cloud-core==1.0.3
+pip3 install google-cloud-tasks==1.2.1
+pip3 install google-cloud-datastore==1.12.0
+pip3 install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib

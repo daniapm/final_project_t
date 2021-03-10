@@ -19,15 +19,17 @@ def pause(request, tax_id):
     if paus == 'PAUSED':
         report = "paused"
         kind = "SUCCES"
-        reports = Report(taxengine_id=Taxengine((str(tax_id))),
-                    step_id=Step(str(step.id)), message=report, kind=kind)
+        reports = Report(message=report, kind=kind)
+        reports.taxengine_id = tax_id
+        reports.step_id = step
         reports.save()
         return HttpResponse(status=200)
     else:
         report = "error pausing"
         kind = "ERROR"
-        reports = Report(taxengine_id=Taxengine((str(tax_id))),
-                    step_id=Step(str(step.id)), message=report, kind=kind)
+        reports = Report(message=report, kind=kind)
+        reports.taxengine_id = tax_id
+        reports.step_id = step
         reports.save()
         return HttpResponse(status=500)
 
@@ -42,14 +44,16 @@ def resume(request, id):
     if resum == 'RUNNING':
         report = "running"
         kind = "SUCCES"
-        reports = Report(taxengine_id=Taxengine((str(tax_id))),
-                    step_id=Step(str(step.id)), message=report, kind=kind)
+        reports = Report(message=report, kind=kind)
+        reports.taxengine_id = tax_id
+        reports.step_id = step
         reports.save()
         return HttpResponse(status=200)
     else:
         report = "error running"
         kind = "ERROR"
-        reports = Report(taxengine_id=Taxengine((str(tax_id))),
-                    step_id=Step(str(step.id)), message=report, kind=kind)
+        reports = Report(message=report, kind=kind)
+        reports.taxengine_id = tax_id
+        reports.step_id = step
         reports.save()
         return HttpResponse(status=500)

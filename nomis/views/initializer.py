@@ -1,20 +1,20 @@
 """Module that make all the steps"""
 from django.http import HttpResponse, JsonResponse
 
-from nomis.views import reports_v
+from nomis.views import reports
 from nomis.views import (
-    app_enigne_v,
-    cloud_tasks_v,
-    datastore_v,
-    extract_data_v,
+    app_engine,
+    cloud_tasks,
+    datastore,
+    extract_data,
 )
 
 def initializer(request):
     """Function that make all the steps for the automatation process"""
     reports.mathops_report(request, input="true")
-    cloud_tasks_v.pause(request, id)
-    extract_data_v.extract(request)
-    datastore_v.setting_range(request)
-    cloud_tasks_v.resume(request)
+    cloud_tasks.pause(request, id)
+    extract_data.extract(request)
+    datastore.setting_range(request)
+    cloud_tasks.resume(request)
 
     return HttpResponse("Done!")

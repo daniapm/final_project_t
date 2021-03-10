@@ -7,8 +7,7 @@ from django.conf import settings
 
 
 def set_datastore_range():
-    """This function set the entities in google cloud datastore
-    """
+    """This function set the entities in google cloud datastore"""
     try:
         client = datastore.Client()
         complete_key = client.key(settings.ENTITY_KIND, settings.ID_NAME)
@@ -25,7 +24,7 @@ def set_datastore_range():
         client.put(task)
         result = client.get(complete_key)
         print(result)
-        return ("UPDATED")
+        return "UPDATED"
     except Exception as e:
-        print('{}'.format(e))
-        return(e)
+        print("{}".format(e))
+        return e

@@ -15,17 +15,20 @@ def delete(request, tax_id):
     """
     dele = delete_instances()
     step = Step.objects.get(code_name="DEL_INSTANCE")
+
     if dele is True:
         report = "deleted instance"
         kind = "SUCCES"
-        reports = Report(taxengine_id=Taxengine((str(tax_id))),
-                    step_id=Step(str(step.id)), message=report, kind=kind)
+        reports = Report(message=report, kind=kind)
+        reports.taxengine_id = tax_id
+        reports.step_id = step
         reports.save()
         return HttpResponse(status=200)
     else:
         report = "error deleting"
         kind = "ERROR"
-        reports = Report(taxengine_id=Taxengine((str(tax_id))),
-            step_id=Step(str(step.id)), message=report, kind=kind)
+        reports = Report(message=report, kind=kind)
+        reports.taxengine_id = tax_id
+        reports.step_id = step
         reports.save()
         return HttpResponse(status=500)

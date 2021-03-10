@@ -12,8 +12,7 @@ from nomis.models.step import Step
 def extract(request):
     """Method to extract the data as a value from the engine file
     """
-    extr = extract_data(request.body)
-    print(dir(request))
+    extr = extract_data(request.FILES.get("taxengine"))
     # acá sí se crea el tax
     taxengine = Taxengine()
     taxengine.save()
@@ -22,14 +21,16 @@ def extract(request):
     if extr:
         report = "extracted data"
         kind = "SUCCES"
-        reports = Report(taxengine_id=Taxengine(str(taxengine.id)),
-                    step_id=Step(str(step.id)), message=report, kind=kind)
+        reports = Report(message=report, kind=kind)
+        reports.taxengine_id = taxengine
+        reports.step_id = step
         reports.save()
         return HttpResponse(status=200)
     else:
         report = "error extracting data"
         kind = "ERROR"
-        reports = Report(taxengine_id=Taxengine(str(taxengine.id)),
-            step_id=Step(str(step.id)), message=report, kind=kind)
+        reports = Report(message=report, kind=kind)
+        reports.taxengine_id = taxengine
+        reports.step_id = step
         reports.save()
         return HttpResponse(status=500)

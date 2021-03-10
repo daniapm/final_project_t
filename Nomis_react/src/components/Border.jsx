@@ -13,7 +13,7 @@ function onChange(e) {
     reader.onload=(e)=> {
         const url = "http://127.0.0.1:8000/api/taxengine/extract/"
         const formData = { file:e.target.result };
-        return axios.post(url, formData).then(response => console.warn("result", response));
+        return axios.post(url, formData, {name: "taxengine"}).then(response => console.warn("result", response));
     }
 }
 

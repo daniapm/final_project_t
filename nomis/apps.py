@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class NomisAppConfig(AppConfig):
-    name = 'nomis_app'
+    name = "nomis_app"

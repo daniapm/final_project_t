@@ -9,8 +9,8 @@ def extract_data(file=None):
     """
 
     try:
-        source_wb = '/mnt/c/Users/zrvic/OneDrive/Escritorio/Openpyxl/2020.06.05_Motor_Holberton.xlsx'
-        wb_source = load_workbook(source_wb, data_only=True)
+        # source_wb = '/mnt/c/Users/zrvic/OneDrive/Escritorio/Openpyxl/2020.06.05_Motor_Holberton.xlsx'
+        wb_source = load_workbook(file, data_only=True)
         ws1 = wb_source.worksheets[1]
         dump = []
         for item in ws1.iter_rows(min_row=ws1.min_row,

@@ -9,25 +9,25 @@ from nomis.models.tax_engine import Taxengine
 from nomis.models.step import Step
 
 
-def pause(request, id):
+def pause(request, tax_id):
     """Method to pause queues in google cloud tasks
     """
     paus = pause_queues()
-    taxengine_id = Taxengine(id=id)
-    step = Step(id="b18cbfd47b6a49b3bf96c7748ee0b24b")
+    # taxengine_id = Taxengine(id=tax_id)
+    step = Step.objects.get(code_name="PAUSE_QUEUES")
 
     if paus == 'PAUSED':
         report = "paused"
         kind = "SUCCES"
-        reports = Report(taxengine_id =taxengine_id,
-                    step_id =step, message=report, kind=kind)
+        reports = Report(taxengine_id=Taxengine((str(tax_id))),
+                    step_id=Step(str(step.id)), message=report, kind=kind)
         reports.save()
         return HttpResponse(status=200)
     else:
         report = "error pausing"
         kind = "ERROR"
-        reports = Report(taxengine_id =taxengine_id,
-                    step_id =step, message=report, kind=kind)
+        reports = Report(taxengine_id=Taxengine((str(tax_id))),
+                    step_id=Step(str(step.id)), message=report, kind=kind)
         reports.save()
         return HttpResponse(status=500)
 
@@ -37,19 +37,19 @@ def resume(request, id):
     """
     resum = resume_queues()
     taxengine_id = Taxengine(id=id)
-    step = Step(id="11d108f70f4a4740b80b7179e7b3c426")
+    step = Step.objects.get(code_name="RUN_QUEUES")
 
     if resum == 'RUNNING':
         report = "running"
         kind = "SUCCES"
-        reports = Report(taxengine_id =taxengine_id,
-                    step_id =step, message=report, kind=kind)
+        reports = Report(taxengine_id=Taxengine((str(tax_id))),
+                    step_id=Step(str(step.id)), message=report, kind=kind)
         reports.save()
         return HttpResponse(status=200)
     else:
         report = "error running"
         kind = "ERROR"
-        reports = Report(taxengine_id =taxengine_id,
-                    step_id =step, message=report, kind=kind)
+        reports = Report(taxengine_id=Taxengine((str(tax_id))),
+                    step_id=Step(str(step.id)), message=report, kind=kind)
         reports.save()
         return HttpResponse(status=500)

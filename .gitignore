@@ -1,0 +1,3 @@
+__pycache__
+Nomis_react/node_modules/.cache/babel-loader/*.json
+NOMIS/__pycache__/*.cpython-36.pyc

@@ -9,30 +9,28 @@ from nomis.models.tax_engine import Taxengine
 from nomis.models.step import Step
 
 
-def pause(request, id):
+def pause(request, tax_id):
     """Method to pause queues in google cloud tasks
     """
-    if id in Taxengine.objects.all():
-        paus = pause_queues()
-        taxengine_id = Taxengine(id=id)
-        step = Step(id="b18cbfd47b6a49b3bf96c7748ee0b24b")
+    paus = pause_queues()
+    # taxengine_id = Taxengine(id=tax_id)
+    step = Step.objects.get(code_name="PAUSE_QUEUES")
 
-        if paus == 'PAUSED':
-            report = "paused"
-            kind = "SUCCES"
-            reports = Report(taxengine_id =taxengine_id,
-                        step_id =step, message=report, kind=kind)
-            reports.save()
-            return HttpResponse(status=200)
-        else:
-            report = "error pausing"
-            kind = "ERROR"
-            reports = Report(taxengine_id =taxengine_id,
-                        step_id =step, message=report, kind=kind)
-            reports.save()
-            return HttpResponse(status=500)
+    if paus == 'PAUSED':
+        report = "paused"
+        kind = "SUCCES"
+        reports = Report(taxengine_id=tax_id,
+                    step_id=step.id, message=report, kind=kind)
+        reports.save()
+        return HttpResponse(status=200)
     else:
+        report = "error pausing"
+        kind = "ERROR"
+        reports = Report(taxengine_id=tax_id,
+                    step_id=step.id, message=report, kind=kind)
+        reports.save()
         return HttpResponse(status=500)
+
 
 def resume(request, id):
     """Method to resume queues in google cloud tasks

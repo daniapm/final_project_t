@@ -13,6 +13,7 @@ function onChange(e) {
     reader.onload=(e)=> {
         const url = "http://127.0.0.1:8000/api/taxengine/extract/"
         const formData = { file:e.target.result };
+        console.log(e.target.result);
         return axios.post(url, formData, {name: "taxengine"}).then(response => console.warn("result", response));
     }
 }
@@ -24,9 +25,9 @@ function Border() {
     return (
         <div className="border">
             NOMIS
-            <div className="drop_area">
+            <form method="post" className="drop_area" encType="multipart/form-data">
                 <input type="file" name="file" onChange={(e)=>onChange(e)} />
-            </div>
+            </form>
             <div className="status">
                 Process Status
                 <ul>

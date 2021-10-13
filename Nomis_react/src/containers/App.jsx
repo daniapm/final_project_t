@@ -1,8 +1,8 @@
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Border from '../components/Border'
-import DropArea from '../components/DropArea'
-import '../assets/styles/App.css'
+import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
+import Border from '../components/Border/Border'
+import DropArea from '../components/DropArea/DropArea'
+import './App.css'
 
 
 function App() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/styles/components/DropArea.css';
+import './DropArea.css';
 
 function onChange(e) {
     let files = e.target.files;

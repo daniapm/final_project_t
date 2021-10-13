@@ -1,6 +1,6 @@
 import React from 'react';
-import '../assets/styles/components/Border.css';
-import '../assets/styles/components/DropArea.css';
+import './Border.css';
+import '../DropArea/DropArea.css';
 import axios from 'axios';
 
 

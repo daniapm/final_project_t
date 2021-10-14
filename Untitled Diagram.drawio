@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-14T20:14:37.358Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="KFFvyrvKRZ8n8jUmczc2" version="15.4.3" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-14T20:20:50.877Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="4nVaY-xF5oD8-1WdTDWK" version="15.4.3" type="github">
   <diagram id="xE8j3Ur5t0lkxLYd9usm" name="Page-1">
     <mxGraphModel dx="1483" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -440,10 +440,10 @@
           <mxGeometry x="300" y="564" width="60" height="20" as="geometry" />
         </mxCell>
         <mxCell id="d07Esuv3IB-l1lAYNw2L-403" value="Select the changes in the &lt;br&gt;configuration" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=24;fontColor=#000000;" vertex="1" parent="d07Esuv3IB-l1lAYNw2L-376">
-          <mxGeometry x="280" y="360" width="290" height="60" as="geometry" />
+          <mxGeometry x="475" y="340" width="290" height="60" as="geometry" />
         </mxCell>
         <mxCell id="d07Esuv3IB-l1lAYNw2L-404" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.forms.rrect;rSize=0;strokeColor=#999999;fillColor=#ffffff;recursiveResize=0;rounded=0;glass=0;labelBackgroundColor=#005858;labelBorderColor=none;sketch=1;fontSize=24;fontColor=#000000;opacity=90;" vertex="1" parent="d07Esuv3IB-l1lAYNw2L-376">
-          <mxGeometry x="680" y="320" width="150" height="120" as="geometry" />
+          <mxGeometry x="1020" y="260" width="150" height="120" as="geometry" />
         </mxCell>
         <mxCell id="d07Esuv3IB-l1lAYNw2L-405" value="Option 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.forms.rrect;rSize=0;fillColor=#eeeeee;strokeColor=#999999;gradientColor=#cccccc;align=left;spacingLeft=4;fontSize=17;fontColor=#666666;labelPosition=right;rounded=0;glass=0;labelBackgroundColor=#005858;labelBorderColor=none;sketch=1;opacity=90;" vertex="1" parent="d07Esuv3IB-l1lAYNw2L-404">
           <mxGeometry x="8" y="7.5" width="15" height="15" as="geometry" />
@@ -456,6 +456,12 @@
         </mxCell>
         <mxCell id="d07Esuv3IB-l1lAYNw2L-408" value="Option 4" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.forms.rrect;rSize=0;fillColor=#eeeeee;strokeColor=#999999;gradientColor=#cccccc;align=left;spacingLeft=4;fontSize=17;fontColor=#666666;labelPosition=right;rounded=0;glass=0;labelBackgroundColor=#005858;labelBorderColor=none;sketch=1;opacity=90;" vertex="1" parent="d07Esuv3IB-l1lAYNw2L-404">
           <mxGeometry x="8" y="97.5" width="15" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="d07Esuv3IB-l1lAYNw2L-409" value="Yes" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.forms.rrect;rSize=0;fillColor=#eeeeee;strokeColor=#999999;gradientColor=#cccccc;align=left;spacingLeft=4;fontSize=17;fontColor=#666666;labelPosition=right;rounded=0;glass=0;labelBackgroundColor=default;labelBorderColor=none;sketch=0;opacity=90;" vertex="1" parent="d07Esuv3IB-l1lAYNw2L-376">
+          <mxGeometry x="475" y="420" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="d07Esuv3IB-l1lAYNw2L-410" value="Not" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.forms.rrect;rSize=0;fillColor=#eeeeee;strokeColor=#999999;gradientColor=#cccccc;align=left;spacingLeft=4;fontSize=17;fontColor=#666666;labelPosition=right;rounded=0;glass=0;labelBackgroundColor=default;labelBorderColor=none;sketch=0;opacity=90;" vertex="1" parent="d07Esuv3IB-l1lAYNw2L-376">
+          <mxGeometry x="697" y="420" width="33" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

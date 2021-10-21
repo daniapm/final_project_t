@@ -28,7 +28,7 @@ export const steps = [
     content: 'Last-content',
   },
 ];
-const Border = () => {
+const StepComponent = () => {
   const [current, setCurrent] = React.useState(0);
 
   const next = () => {
@@ -68,4 +68,4 @@ const Border = () => {
   );
 };
 
-export default Border;
+export default StepComponent;

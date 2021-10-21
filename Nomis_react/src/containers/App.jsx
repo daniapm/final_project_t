@@ -5,7 +5,6 @@ import {
 } from "react-router-dom";
 import Header from '../components/layout/Header/Header'
 import Footer from '../components/layout/Footer/Footer'
-import Border from '../components/Steps/Steps'
 import DropArea from '../components/DropArea/DropArea'
 import TaxFile from '../components/TaxFile/TaxFile'
 import UpdateDump from '../components/UpdateDump/UpdateDump'
@@ -14,8 +13,8 @@ import LightweightFile from '../components/LightweightFile/LightweightFile'
 import ConfigFile from '../components/ConfigFile/ConfigFile'
 import MainContainer from '../components/layout/MainContainer/MainContainer'
 import MainContent from '../components/layout/MainContent/MainContent'
+import StepComponent from '../components/Steps/Steps'
 import "../assets/static/logo (3).jpg"
-
 
 function App() {
   return (
@@ -25,7 +24,7 @@ function App() {
         <Router>
           <MainContent>
             <Switch>
-              <Border />
+              <StepComponent />
               <Router path="/TaxFile">
                 <TaxFile />
               </Router>

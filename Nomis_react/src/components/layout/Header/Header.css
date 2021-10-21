@@ -1,0 +1,9 @@
+header {
+  height: 65px;
+  width: 100%;
+  text-align: center;
+  background: white
+    url("../../../assets/static/logo (3).jpg");
+  background-repeat: no-repeat;
+  background-position: 1%;
+}

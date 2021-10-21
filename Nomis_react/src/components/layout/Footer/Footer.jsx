@@ -1,10 +1,9 @@
 import React from 'react';
 import './Footer.css';
 
-function Footer() {
+const Footer = () => {
     return (
-        <footer>
-            <p>Holberton School and Tributi</p>
+        <footer className="dsc-footer">
         </footer>)
 };
 

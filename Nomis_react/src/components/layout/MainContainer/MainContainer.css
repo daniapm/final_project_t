@@ -1,0 +1,6 @@
+section {
+  grid-template-columns: 200px auto;
+  grid-template-rows: 60px auto 50px;
+
+  min-height: 500px;
+}

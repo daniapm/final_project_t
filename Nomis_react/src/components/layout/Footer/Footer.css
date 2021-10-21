@@ -1,0 +1,9 @@
+footer {
+  height: 65px;
+  width: 100%;
+  text-align: center;
+  background: #2a6662
+    url("/home/daniapm/tributi/final_project_tributi/Nomis_react/src/assets/static/footer (1).jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}

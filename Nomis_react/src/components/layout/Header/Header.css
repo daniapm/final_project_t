@@ -1,0 +1,9 @@
+header {
+  height: 65px;
+  width: 100%;
+  text-align: center;
+  background: white
+    url("/home/daniapm/tributi/final_project_tributi/Nomis_react/src/assets/static/logo (3).jpg");
+  background-repeat: no-repeat;
+  background-position: 1%;
+}
